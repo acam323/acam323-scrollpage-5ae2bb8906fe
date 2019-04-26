@@ -1,0 +1,36 @@
+       <% unless flash.empty? %>
+                            <div id="error_explanation">
+                                <div class="alert alert-success">
+                                    <% flash.each do |error,message| %>
+                                    <ul>
+                                        <li> <%= message %></li>
+                                    </ul>   
+                                </div>
+                            </div>       
+                                     <% end %>
+                        <% end %> 
+       
+       <!--                  <%= render 'home/errormessages' %>
+    <% if @contact.errors.any? %>
+    <div id="error_explanation">
+        <div class="alert alert-success">
+        <% @contact.errors.each do |message| %>
+        <ul>
+            <li> <%= message %></li>
+        </ul>   
+        </div>
+    </div>       
+        <% end %>
+     <% end %>   -->
+     
+                         <% if not flash.empty? %>
+                            <div id="error_explanation">
+                                <div class="alert alert-success">
+                                    <%= @contact.flash.each do |message| %>
+                                    <ul>
+                                        <li> <%= message %></li>
+                                    </ul>   
+                                </div>
+                            </div>       
+                                     <% end %>
+                        <% end %> 
